@@ -12,6 +12,6 @@ UI designed using **Adobe XD** by [Abouelkhair Rady](https://www.behance.net/Abo
 
 ### Screenshots
 
-| Splash Screen | Welcome Screen |
-|-|-|
-| ![Splash](screenshots/0.Splash.png) | ![Welcome](screenshots/1.Welcome.png) |
+| Splash Screen                       | Welcome Screen                        | Main Screen                     |
+| ----------------------------------- | ------------------------------------- | ------------------------------- |
+| ![Splash](screenshots/0.Splash.png) | ![Welcome](screenshots/1.Welcome.png) | ![Main](screenshots/2.Main.png) |
