@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="layout_padding_small">8dp</dimen>
+    <dimen name="tab_card_radius">20dp</dimen>
+    <dimen name="tab_height">38dp</dimen>
+    <dimen name="tab_padding">48dp</dimen>
+</resources>
