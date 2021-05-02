@@ -46,4 +46,33 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+
+    <style name="Item">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dimen_8</item>
+        <item name="android:paddingBottom">@dimen/dimen_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="Item.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="TransparentBSDialog" parent="Theme.ToDo">
+        <item name="android:colorBackground">@color/purple_5002</item>
+    </style>
+
+
+    <style name="ChipTag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipBackgroundColor">@color/purple_5002</item>
+        <item name="android:checkable">true</item>
+        <item name="checkedIconTint">@color/purple_200</item>
+    </style>
+
 </resources>

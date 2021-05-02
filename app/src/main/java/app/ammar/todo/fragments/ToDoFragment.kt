@@ -4,11 +4,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import app.ammar.todo.R
+import app.ammar.todo.adapters.ClickListener
+import app.ammar.todo.adapters.RecyclerAdapter
+import app.ammar.todo.database.DataProvider
 import app.ammar.todo.databinding.FragmentBinding
 
-class ToDoFragment : Fragment(R.layout.fragment) {
+class ToDoFragment : Fragment() {
 
     lateinit var binding: FragmentBinding
 
@@ -17,13 +21,20 @@ class ToDoFragment : Fragment(R.layout.fragment) {
     ): View {
         binding = FragmentBinding.inflate(inflater)
 
-        binding.notYetTV.text = getString(R.string.not_yet, "ToDo")
 
-        return binding.root
+        val adapter = RecyclerAdapter(ClickListener {
+            Toast.makeText(inflater.context, "ID = $it", Toast.LENGTH_SHORT).show()
+        })
+        adapter.submitList(DataProvider.toDoList)
+
+
+        with(binding) {
+            recyclerView.adapter = adapter
+
+            notYetTV.text = getString(R.string.not_yet, "ToDo")
+            notYetTV.visibility = if (adapter.currentList.isEmpty()) View.VISIBLE else View.GONE
+
+            return root
+        }
     }
-
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        binding = FragmentBinding.bind()
-//    }
 }
