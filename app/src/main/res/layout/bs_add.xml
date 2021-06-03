@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="todo"
+            type="app.ammar.todo.data.model.Todo" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bs"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/bs_layout_padding"
+            android:paddingTop="@dimen/dimen_16"
+            android:paddingEnd="@dimen/bs_layout_padding"
+            android:paddingBottom="@dimen/dimen_16">
+
+
+            <View style="@style/BSLine" />
+
+            <View
+                style="@style/BSLine"
+                android:layout_marginTop="3dp" />
+
+
+            <TextView
+                android:id="@+id/headerTV"
+                style="@style/BSView"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:text="@string/new_todo"
+                android:textColor="@color/purple_500"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--
+                Title
+              -->
+            <TextView
+                android:id="@+id/titleTV"
+                style="@style/BSView.TV"
+                android:text="@string/title"
+                app:layout_constraintTop_toBottomOf="@+id/headerTV" />
+
+            <EditText
+                android:id="@+id/titleET"
+                style="@style/BSView.ET"
+                title="@{todo}"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+
+            <!--
+                Date
+              -->
+            <TextView
+                android:id="@+id/deadlineTV"
+                style="@style/BSView.TV"
+                android:text="@string/deadline"
+                app:layout_constraintTop_toBottomOf="@+id/titleET" />
+
+            <TextView
+                android:id="@+id/selectDateTV"
+                style="@style/BSDate"
+                date_only="@{todo}"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:hint="@string/select_date"
+                app:layout_constraintEnd_toStartOf="@+id/selectTimeTV"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/selectTimeTV"
+                style="@style/BSDate"
+                time_only="@{todo}"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:hint="@string/select_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/selectDateTV" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@style/BSView"
+                android:buttonTint="@android:color/darker_gray"
+                android:hint="@string/_24_hours"
+                app:layout_constraintTop_toBottomOf="@+id/selectDateTV" />
+
+
+            <!--
+                Description
+              -->
+            <TextView
+                android:id="@+id/descTV"
+                style="@style/BSView.TV"
+                android:text="@string/description"
+                app:layout_constraintTop_toBottomOf="@+id/checkbox" />
+
+            <EditText
+                android:id="@+id/descET"
+                style="@style/BSView.ET"
+                desc="@{todo}"
+                android:inputType="textCapSentences|textMultiLine"
+                app:layout_constraintTop_toBottomOf="@+id/descTV" />
+
+
+            <!--
+                Tags
+              -->
+            <TextView
+                android:id="@+id/tagsTV"
+                style="@style/BSView.TV"
+                android:text="@string/tags"
+                app:layout_constraintTop_toBottomOf="@+id/descET" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                style="@style/BSView"
+                android:isScrollContainer="true"
+                app:checkedChip="@id/chipWork"
+                app:chipSpacing="@dimen/dimen_16"
+                app:layout_constraintTop_toBottomOf="@+id/tagsTV"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipWork"
+                    style="@style/ChipTag"
+                    android:text="@string/work" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHome"
+                    style="@style/ChipTag"
+                    android:checked="true"
+                    android:text="@string/home" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipStudy"
+                    style="@style/ChipTag"
+                    android:text="@string/study" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAdd"
+                    style="@style/ChipTag"
+                    android:checkable="false"
+                    android:text="@string/plus" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <!--
+                Add Button
+              -->
+            <Button
+                android:id="@+id/addBTN"
+                style="@style/BSView.TV"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:text="@string/add"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
