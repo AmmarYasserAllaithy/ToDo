@@ -5,12 +5,19 @@
 
     <data>
 
+        <variable
+            name="todoViewModel"
+            type="app.ammar.todo.ui.main.viewmodel.ToDoViewModel" />
+
+        <variable
+            name="doneViewModel"
+            type="app.ammar.todo.ui.main.viewmodel.DoneViewModel" />
     </data>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -26,6 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item" />
 
+        <!-- TODO: Add Icon & style -->
         <TextView
             android:id="@+id/notYetTV"
             android:layout_width="wrap_content"
