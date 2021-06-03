@@ -2,7 +2,22 @@
 <resources>
     <dimen name="layout_padding">16dp</dimen>
     <dimen name="layout_padding_small">8dp</dimen>
+
+    <!-- Tabs Layout -->
     <dimen name="tab_card_radius">20dp</dimen>
-    <dimen name="tab_height">38dp</dimen>
-    <dimen name="tab_padding">48dp</dimen>
+    <dimen name="tab_height">40dp</dimen>
+    <dimen name="tab_padding">42dp</dimen>
+    <dimen name="tab_min_width">148dp</dimen>
+
+    <!-- Bottom Sheet -->
+    <dimen name="bs_layout_padding">24dp</dimen>
+    <dimen name="bs_radius">24dp</dimen>
+
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+
+    <dimen name="card_radius">16dp</dimen>
 </resources>

@@ -12,4 +12,7 @@
 
     <color name="gr_end">#2B0074</color>
     <color name="gr_start">#6E2FD9</color>
+
+    <color name="disabled">#1000</color>
+    <color name="bg_card">#04000000</color>
 </resources>

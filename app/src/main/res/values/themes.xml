@@ -15,64 +15,145 @@
         <item name="fontFamily">sans-serif</item>
     </style>
 
+
+    <!--
+        Fullscreen
+      -->
     <style name="Theme.ToDo.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 
+
+    <!--
+        Custom Styles
+      -->
     <style name="AppNameText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginTop">16dp</item>
         <item name="android:text">@string/app_name</item>
-        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Label">
+    <style name="HeaderTV">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Label.White">
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-    <style name="Label.White.Small">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-
-    <style name="Item">
+    <style name="RoundedCheckbox">
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">@dimen/dimen_8</item>
+        <item name="android:button">@drawable/custom_checkbox</item>
+        <item name="android:buttonTint">@color/purple_200</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ConstraintView">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">@dimen/dimen_8</item>
-        <item name="android:paddingBottom">@dimen/dimen_8</item>
+    </style>
+
+
+    <!--
+        Welcome
+      -->
+    <style name="WelcomeView" parent="ConstraintView">
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+
+    <!--
+        Item
+      -->
+    <style name="ItemView" parent="ConstraintView">
+        <item name="android:paddingTop">@dimen/dimen_4</item>
+        <item name="android:paddingBottom">@dimen/dimen_4</item>
         <item name="android:maxLines">1</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="Item.Title">
+    <style name="ItemView.Title">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="ChipTag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checkable">true</item>
+        <item name="chipBackgroundColor">@color/purple_5002</item>
+        <item name="checkedIconTint">@color/purple_200</item>
+        <item name="checkedIcon">@drawable/ic_baseline_check_circle_24</item>
+    </style>
 
+
+    <!--
+        Details
+      -->
+    <style name="DetailsView" parent="ConstraintView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:padding">@dimen/dimen_4</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_bs</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+    </style>
+
+    <style name="DetailsView.Text">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="DetailsView.Text.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:maxLength">100</item>
+    </style>
+
+
+    <!--
+        BottomSheet
+      -->
     <style name="TransparentBSDialog" parent="Theme.ToDo">
         <item name="android:colorBackground">@color/purple_5002</item>
     </style>
 
+    <style name="BSLine">
+        <item name="android:layout_width">@dimen/dimen_60</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#18000000</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
 
-    <style name="ChipTag">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="chipBackgroundColor">@color/purple_5002</item>
-        <item name="android:checkable">true</item>
-        <item name="checkedIconTint">@color/purple_200</item>
+    <style name="BSView" parent="ConstraintView">
+        <item name="layout_constraintStart_toStartOf">@id/headerTV</item>
+    </style>
+
+    <style name="BSView.TV">
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="BSView.ET">
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:background">@drawable/bg_et_round</item>
+    </style>
+
+    <style name="BSDate" parent="ConstraintView">
+        <item name="android:background">@drawable/bg_et_round</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="layout_constraintTop_toBottomOf">@id/deadlineTV</item>
     </style>
 
 </resources>
