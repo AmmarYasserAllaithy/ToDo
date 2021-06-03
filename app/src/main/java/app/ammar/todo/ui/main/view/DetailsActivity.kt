@@ -1,5 +1,6 @@
 package app.ammar.todo.ui.main.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -48,9 +49,17 @@ class DetailsActivity : AppCompatActivity() {
             true
         }
         R.id.delete -> {
-            // TODO 03-Jun-21 :-> Confirm
-            lifecycleScope.launch { repository.delete(binding.todo!!) }
-            finish()
+            AlertDialog.Builder(this)
+                .setIcon(R.drawable.ic_baseline_cancel_24)
+                .setTitle("Delete")
+                .setMessage("Do you want to delete this ToDo?")
+                .setCancelable(false)
+                .setPositiveButton("Keep") { _, _ -> }
+                .setNegativeButton("Delete") { _, _ ->
+                    lifecycleScope.launch { repository.delete(binding.todo!!) }
+                    finish()
+                }
+                .show()
             true
         }
         else -> super.onOptionsItemSelected(item)
