@@ -45,9 +45,13 @@ class AddBSDFragment(private val onFinish: () -> Unit) : BottomSheetDialogFragme
         binding = BsAddBinding.inflate(inflater)
 
         with(binding) {
+            headerTV.text = getString(R.string.bs_title, getString(R.string._new))
+
             (requireActivity().intent.getSerializableExtra(EXTRA.TODO) as Todo?)?.let {
                 todo = it
                 selCalendar.timeInMillis = it.deadline
+
+                headerTV.text = getString(R.string.bs_title, getString(R.string.edit))
                 addBTN.text = getString(R.string.save)
             }
         }
@@ -130,7 +134,7 @@ class AddBSDFragment(private val onFinish: () -> Unit) : BottomSheetDialogFragme
 
     override fun onDismiss(dialog: DialogInterface) {
         super.onDismiss(dialog)
-        // TODO 03-Jun-21 :-> Discard changes?
+        // fixme 03-Jun-21 :-> Discard changes?
         onFinish()
     }
 

@@ -36,7 +36,7 @@
                 android:id="@+id/headerTV"
                 style="@style/BSView"
                 android:layout_marginTop="@dimen/dimen_16"
-                android:text="@string/new_todo"
+                android:text="@string/bs_title"
                 android:textColor="@color/purple_500"
                 android:textSize="22sp"
                 android:textStyle="bold"
