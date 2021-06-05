@@ -35,7 +35,6 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item" />
 
-        <!-- TODO: Add Icon & style -->
         <TextView
             android:id="@+id/notYetTV"
             android:layout_width="wrap_content"
@@ -43,9 +42,13 @@
             android:layout_gravity="center"
             android:layout_marginBottom="80dp"
             android:clickable="true"
+            android:drawableTint="@color/purple_5002"
             android:focusable="true"
             android:gravity="center"
             android:text="@string/not_yet"
+            android:textColor="@color/purple_200"
+            android:textSize="16sp"
+            app:drawableTopCompat="@drawable/ic_logo_foreground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
