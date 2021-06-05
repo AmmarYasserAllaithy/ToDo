@@ -31,25 +31,25 @@ UI designed using **Adobe XD** by [Abouelkhair Rady](https://www.behance.net/Abo
 
 ### Screenshots
 
-<div style='text-align: center; background: #6200EE05; box-shadow: 0 0 5px #60E2'>
-    [Screenshot 01](screenshots/1.jpg | height=575)
-    [Screenshot 02](screenshots/2.jpg | height=575)
+<div align='center'>
+    <img alt='Screenshot 01' height='575' src='screenshots/1.jpg'/>
+    <img alt='Screenshot 02' height='575' src='screenshots/2.jpg'/>
     <br/>
-    [Screenshot 03](screenshots/3.jpg | height=575)
-    [Screenshot 04](screenshots/4.jpg | height=575)
+    <img alt='Screenshot 03' height='575' src='screenshots/3.jpg'/>
+    <img alt='Screenshot 04' height='575' src='screenshots/4.jpg'/>
     <br/>
-    [Screenshot 05](screenshots/5.jpg | height=575)
-    [Screenshot 06](screenshots/6.jpg | height=575)
+    <img alt='Screenshot 05' height='575' src='screenshots/5.jpg'/>
+    <img alt='Screenshot 06' height='575' src='screenshots/6.jpg'/>
     <br/>
-    [Screenshot 07](screenshots/7.jpg | height=575)
+    <img alt='Screenshot 07' height='575' src='screenshots/7.jpg'/>
     <br/>
-    [Screenshot 08](screenshots/8.jpg | height=575)
-    [Screenshot 09](screenshots/9.jpg | height=575)
+    <img alt='Screenshot 08' height='575' src='screenshots/8.jpg'/>
+    <img alt='Screenshot 09' height='575' src='screenshots/9.jpg'/>
     <br/>
-    [Screenshot 10](screenshots/10.jpg | height=575)
-    [Screenshot 11](screenshots/11.jpg | height=575)
+    <img alt='Screenshot 10' height='575' src='screenshots/10.jpg'/>
+    <img alt='Screenshot 11' height='575' src='screenshots/11.jpg'/>
     <br/>
-    [Screenshot 12](screenshots/12.jpg | height=575)
-    [Screenshot 13](screenshots/13.jpg | height=575)
-    [Screenshot 14](screenshots/14.jpg | height=575)
+    <img alt='Screenshot 12' height='575' src='screenshots/12.jpg'/>
+    <img alt='Screenshot 13' height='575' src='screenshots/13.jpg'/>
+    <img alt='Screenshot 14' height='575' src='screenshots/14.jpg'/>
 </div>
