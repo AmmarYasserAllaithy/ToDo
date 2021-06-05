@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="todo"
+            type="app.ammar.todo.data.model.Todo" />
+
+        <variable
+            name="clickListener"
+            type="app.ammar.todo.ui.main.adapters.ClickListener" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        android:onClick="@{() -> clickListener.onClick(todo)}"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_card"
+            android:padding="@dimen/dimen_8">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                style="@style/RoundedCheckbox"
+                android:onClick="@{() -> clickListener.toggleDone(todo)}"
+                app:done="@{todo}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                style="@style/ItemView.Title"
+                android:text="@string/title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="@{todo}" />
+
+            <TextView
+                android:id="@+id/descTV"
+                style="@style/ItemView"
+                android:text="@string/description"
+                app:brief_desc="@{todo}"
+                app:layout_constraintEnd_toEndOf="@id/titleTV"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                style="@style/ItemView"
+                android:text="@string/date"
+                app:date="@{todo}"
+                app:layout_constraintEnd_toEndOf="@id/titleTV"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toBottomOf="@id/descTV" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHome"
+                style="@style/ChipTag"
+                android:clickable="false"
+                android:text="@string/home"
+                app:layout_constraintStart_toEndOf="@+id/checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/dateTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

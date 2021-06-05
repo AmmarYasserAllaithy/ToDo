@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="todo"
+            type="app.ammar.todo.data.model.Todo" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.view.DetailsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/titleTV"
+                style="@style/DetailsView.Text.Title"
+                title="@{todo}"
+                android:hint="@string/title"
+                android:maxLength="100"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dateTV"
+                style="@style/DetailsView"
+                date="@{todo}"
+                android:hint="@string/date"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+            <TextView
+                android:id="@+id/descTV"
+                style="@style/DetailsView.Text"
+                desc="@{todo}"
+                android:layout_marginStart="@dimen/dimen_8"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_8"
+                android:hint="@string/description"
+                app:layout_constraintTop_toBottomOf="@id/dateTV" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHome"
+                style="@style/ChipTag"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:clickable="false"
+                android:text="@string/home"
+                app:layout_constraintStart_toStartOf="@id/descTV"
+                app:layout_constraintTop_toBottomOf="@+id/descTV" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
