@@ -11,6 +11,7 @@ import app.ammar.todo.data.model.Todo
 import app.ammar.todo.data.model.TodoDatabase
 import app.ammar.todo.data.repository.TodoRepository
 import app.ammar.todo.databinding.ActivityDetailsBinding
+import app.ammar.todo.databinding.DialogConfirmBinding
 import app.ammar.todo.ui.main.view.fragments.AddBSDFragment
 import app.ammar.todo.utils.EXTRA
 import kotlinx.coroutines.launch
@@ -49,17 +50,33 @@ class DetailsActivity : AppCompatActivity() {
             true
         }
         R.id.delete -> {
-            AlertDialog.Builder(this)
-                .setIcon(R.drawable.ic_baseline_cancel_24)
-                .setTitle("Delete")
-                .setMessage("Do you want to delete this ToDo?")
-                .setCancelable(false)
-                .setPositiveButton("Keep") { _, _ -> }
-                .setNegativeButton("Delete") { _, _ ->
-                    lifecycleScope.launch { repository.delete(binding.todo!!) }
-                    finish()
-                }
+            val dialogBinding = DialogConfirmBinding.inflate(layoutInflater)
+
+            val dialog = AlertDialog.Builder(this, R.style.ConfirmDialog)
+                .setView(dialogBinding.root)
                 .show()
+
+            dialogBinding.apply {
+                headerTv.text = getString(R.string.delete)
+                bodyTv.text = """Do you really want to delete this ToDo?
+                    |This action is unrecoverable!""".trimMargin()
+
+                noBtn.apply {
+                    text = getString(R.string.keep)
+
+                    setOnClickListener { dialog.dismiss() }
+                }
+
+                yesBtn.apply {
+                    text = getString(R.string.delete)
+
+                    setOnClickListener {
+                        lifecycleScope.launch { repository.delete(binding.todo!!) }
+                        finish()
+                    }
+                }
+            }
+
             true
         }
         else -> super.onOptionsItemSelected(item)

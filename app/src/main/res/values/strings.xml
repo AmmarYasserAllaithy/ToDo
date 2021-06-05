@@ -39,4 +39,11 @@
     <string name="pref_file_key">Pref_File_key</string>
     <string name="pref_user_key">Pref_User_key</string>
     <string name="edit_user">Edit username</string>
+
+    <!-- Confirm Dialog -->
+    <string name="header">Header</string>
+    <string name="body">Body</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="keep">Keep</string>
 </resources>

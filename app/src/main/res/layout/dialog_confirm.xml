@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_rounded">
+
+        <TextView
+            android:id="@+id/header_tv"
+            style="@style/ConfirmDialogItem.TV"
+            android:text="@string/header"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/body_tv"
+            style="@style/ConfirmDialogItem.TV"
+            android:text="@string/body"
+            app:layout_constraintTop_toBottomOf="@+id/header_tv" />
+
+        <Button
+            android:id="@+id/no_btn"
+            style="@style/ConfirmDialogItem.BTN"
+            android:background="@drawable/bg_btn_no"
+            android:text="@string/no"
+            android:textColor="@color/purple_500"
+            app:layout_constraintEnd_toStartOf="@id/yes_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/yes_btn"
+            style="@style/ConfirmDialogItem.BTN"
+            android:background="@drawable/bg_btn_yes"
+            android:text="@string/yes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/no_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
