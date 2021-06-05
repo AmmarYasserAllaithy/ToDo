@@ -26,7 +26,7 @@ Simple android app whose functionality is to track and filter your daily To-Do.
 
 ### Collaboration
 
-UI designed using **Adobe XD** by [Abouelkhair Rady <img alt='photo' style='width: 15px; height: 15px; border-radius: 15px; padding: 3px; box-shadow: 0 0 5px #60E2' src='https://mir-s3-cdn-cf.behance.net/user/115/98dd8c75558671.59e99e164ac64.png'>](https://www.behance.net/Abou-Elkhair)
+UI designed using **Adobe XD** by [Abouelkhair Rady](https://www.behance.net/Abou-Elkhair)
 
 
 ### Screenshots
