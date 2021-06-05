@@ -45,10 +45,9 @@ class AddBSDFragment(private val onFinish: () -> Unit) : BottomSheetDialogFragme
         binding = BsAddBinding.inflate(inflater)
 
         with(binding) {
-            val exTodo = requireActivity().intent.getSerializableExtra(EXTRA.TODO) as Todo?
-
-            if (exTodo != null) {
-                todo = exTodo
+            (requireActivity().intent.getSerializableExtra(EXTRA.TODO) as Todo?)?.let {
+                todo = it
+                selCalendar.timeInMillis = it.deadline
                 addBTN.text = getString(R.string.save)
             }
         }
