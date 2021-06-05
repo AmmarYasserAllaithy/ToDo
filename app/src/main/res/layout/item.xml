@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_8"
         android:onClick="@{() -> clickListener.onClick(todo)}"
-        app:cardCornerRadius="@dimen/card_radius">
-        <!-- app:cardElevation="3dp"> -->
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
