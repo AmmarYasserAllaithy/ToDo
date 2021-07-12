@@ -31,7 +31,7 @@ UI designed using **Adobe XD** by [Abouelkhair Rady](https://www.behance.net/Abo
 
 ---
 
-***<p style="text-align: center">If you want to give it a try, you can download and install the apk on your phone.</p>***
+***<p style="text-align: center">If you want to give it a try, you can download and install the [ToDo.apk](https://github.com/AmmarYasserAllaiThy/ToDo/releases/download/1.1/ToDo.apk) on your phone.</p>***
 
 ---
 
