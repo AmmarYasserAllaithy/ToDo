@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#BBBB86FC</color>
+    <color name="purple_500">#BB6200EE</color>
+    <color name="purple_700">#BB3700B3</color>
+
+    <color name="purple_5002">#556200EE</color>
+
+    <color name="black">#FF191919</color>
+    <color name="white">#FEEE</color>
+
+    <color name="disabled">#3000</color>
+    <color name="bg_card">#CC292929</color>
+</resources>

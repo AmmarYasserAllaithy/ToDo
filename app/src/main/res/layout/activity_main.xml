@@ -66,6 +66,7 @@
                 android:id="@+id/tabLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/tab_height"
+                android:background="@drawable/bg_tab"
                 app:tabBackground="@drawable/bg_tab"
                 app:tabIndicator="@drawable/bg_tab_selected"
                 app:tabIndicatorGravity="stretch"
